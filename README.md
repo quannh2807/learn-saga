@@ -8,6 +8,7 @@
       - [Blocking/Non-blocking call](#blockingnon-blocking-call)
       - [Watcher/Worker](#watcherworker)
   - [Redux Saga: 03 - Setup project dùng Typescript, Redux Toolkit và Create React App 🚀](#redux-saga-03---setup-project-dùng-typescript-redux-toolkit-và-create-react-app-)
+  - [Redux Saga: 04 - Add Redux Saga vào Redux Toolkit 🎉](#redux-saga-04---add-redux-saga-vào-redux-toolkit-)
 
 
 ## Redux Saga: 01 - Giới thiệu tổng quan về saga 🎉
@@ -49,3 +50,7 @@ console.log(gen.next().value);
 #### Watcher/Worker
 
 ## Redux Saga: 03 - Setup project dùng Typescript, Redux Toolkit và Create React App 🚀
+
+## Redux Saga: 04 - Add Redux Saga vào Redux Toolkit 🎉
+
+- Serializable
