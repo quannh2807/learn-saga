@@ -12,6 +12,8 @@
   - [Redux Saga: 05 - Những effect creators phổ biến nên biết 🎉](#redux-saga-05---những-effect-creators-phổ-biến-nên-biết-)
   - [Redux Saga: 06 - Phân biệt takeEvery và takeLatest 😊](#redux-saga-06---phân-biệt-takeevery-và-takelatest-)
   - [Redux Saga: 07 - Viết Saga thế nào cho dễ test? 🤔](#redux-saga-07---viết-saga-thế-nào-cho-dễ-test-)
+  - [Redux Saga: 08 - Phân biệt fork và spawn 🤔](#redux-saga-08---phân-biệt-fork-và-spawn-)
+  - [Redux Saga 10: API cho dự án quản lý học sinh.](#redux-saga-10-api-cho-dự-án-quản-lý-học-sinh)
 
 ## Redux Saga: 01 - Giới thiệu tổng quan về saga 🎉
 
@@ -78,5 +80,15 @@ console.log(gen.next().value);
 ## Redux Saga: 06 - Phân biệt takeEvery và takeLatest 😊
 
 ## Redux Saga: 07 - Viết Saga thế nào cho dễ test? 🤔
+
 > call()
-Gọi hàm async có thể yield trực tiếp hàm, hoặc đặt trong call()
+> Gọi hàm async có thể yield trực tiếp hàm, hoặc đặt trong call()
+
+## Redux Saga: 08 - Phân biệt fork và spawn 🤔
+[saga's fork model](https://redux-saga.js.org/docs/advanced/ForkModel)
+
+fork
+spawn
+
+## Redux Saga 10: API cho dự án quản lý học sinh.
+REST client
