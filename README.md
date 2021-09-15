@@ -10,6 +10,7 @@
   - [Redux Saga: 03 - Setup project dùng Typescript, Redux Toolkit và Create React App 🚀](#redux-saga-03---setup-project-dùng-typescript-redux-toolkit-và-create-react-app-)
   - [Redux Saga: 04 - Add Redux Saga vào Redux Toolkit 🎉](#redux-saga-04---add-redux-saga-vào-redux-toolkit-)
   - [Redux Saga: 05 - Những effect creators phổ biến nên biết 🎉](#redux-saga-05---những-effect-creators-phổ-biến-nên-biết-)
+  - [Redux Saga: 06 - Phân biệt takeEvery và takeLatest 😊](#redux-saga-06---phân-biệt-takeevery-và-takelatest-)
 
 ## Redux Saga: 01 - Giới thiệu tổng quan về saga 🎉
 
@@ -72,3 +73,5 @@ console.log(gen.next().value);
 | 8   | throttle                            |        |
 | 9   | debounce                            |        |
 | 10  | retry                               |        |
+
+## Redux Saga: 06 - Phân biệt takeEvery và takeLatest 😊
