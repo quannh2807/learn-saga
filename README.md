@@ -9,7 +9,7 @@
       - [Watcher/Worker](#watcherworker)
   - [Redux Saga: 03 - Setup project dùng Typescript, Redux Toolkit và Create React App 🚀](#redux-saga-03---setup-project-dùng-typescript-redux-toolkit-và-create-react-app-)
   - [Redux Saga: 04 - Add Redux Saga vào Redux Toolkit 🎉](#redux-saga-04---add-redux-saga-vào-redux-toolkit-)
-
+  - [Redux Saga: 05 - Những effect creators phổ biến nên biết 🎉](#redux-saga-05---những-effect-creators-phổ-biến-nên-biết-)
 
 ## Redux Saga: 01 - Giới thiệu tổng quan về saga 🎉
 
@@ -53,4 +53,22 @@ console.log(gen.next().value);
 
 ## Redux Saga: 04 - Add Redux Saga vào Redux Toolkit 🎉
 
-- Serializable
+-   Serializable
+
+## Redux Saga: 05 - Những [effect creators](https://redux-saga.js.org/docs/api/#effect-creators) phổ biến nên biết 🎉
+
+-   Effect: js object chứa thông tin để saga middleware biết phải cần phải làm gì
+-   Effect creators: func trả về một Effect. Và nó không thực thi Effect này, saga middleware sẽ thực thi.
+
+| #   | Effect creators                     | làm gì |
+| --- | ----------------------------------- | ------ |
+| 1   | takeEvery(pattern, saga, ...args)   |        |
+| 2   | takeLatest(pattern, saga, ...args)  |        |
+| 3   | takeLeading(pattern, saga, ...args) |        |
+| 4   | put(action)                         |        |
+| 5   | call(fn, ..args)                    |        |
+| 6   | all([...effects])                   |        |
+| 7   | take(pattern) and fork(fn, ...args) |        |
+| 8   | throttle                            |        |
+| 9   | debounce                            |        |
+| 10  | retry                               |        |
