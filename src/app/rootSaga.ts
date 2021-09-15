@@ -1,8 +1,9 @@
 import counterSaga from 'features/counter/counterSaga';
-import { all } from 'redux-saga/effects';
+import { all, delay } from 'redux-saga/effects';
 
 function* helloSaga() {
-	console.log('Hello saga');
+	console.log('Delay 1s and hello saga');
+	yield delay(1000);
 }
 
 export default function* rootSaga() {

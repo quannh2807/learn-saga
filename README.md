@@ -14,6 +14,9 @@
   - [Redux Saga: 07 - Viết Saga thế nào cho dễ test? 🤔](#redux-saga-07---viết-saga-thế-nào-cho-dễ-test-)
   - [Redux Saga: 08 - Phân biệt fork và spawn 🤔](#redux-saga-08---phân-biệt-fork-và-spawn-)
   - [Redux Saga 10: API cho dự án quản lý học sinh.](#redux-saga-10-api-cho-dự-án-quản-lý-học-sinh)
+  - [Redux Saga: 14 - Setup routings with react router dom typescript](#redux-saga-14---setup-routings-with-react-router-dom-typescript)
+      - [Mini Project - Student Management](#mini-project---student-management)
+        - [fetures](#fetures)
 
 ## Redux Saga: 01 - Giới thiệu tổng quan về saga 🎉
 
@@ -85,10 +88,29 @@ console.log(gen.next().value);
 > Gọi hàm async có thể yield trực tiếp hàm, hoặc đặt trong call()
 
 ## Redux Saga: 08 - Phân biệt fork và spawn 🤔
+
 [saga's fork model](https://redux-saga.js.org/docs/advanced/ForkModel)
 
 fork
 spawn
 
 ## Redux Saga 10: API cho dự án quản lý học sinh.
+
 REST client
+
+## Redux Saga: 14 - Setup routings with react router dom typescript
+
+#### Mini Project - Student Management
+
+##### fetures
+
+-   auth / authentication:
+    -   login
+    -   register
+    -   forget password
+
+-   admin: layout - components
+
+-   admin/dashboard
+
+-   admin/students
