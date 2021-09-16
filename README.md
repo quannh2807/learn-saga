@@ -22,6 +22,7 @@
   - [Redux Saga: 17 - Cài đặt 2 tasks login và logout](#redux-saga-17---cài-đặt-2-tasks-login-và-logout)
   - [Redux Saga: 18 - Phân tích cách xử lý navigation trong redux saga](#redux-saga-18---phân-tích-cách-xử-lý-navigation-trong-redux-saga)
       - [Có 3 cách giải quyết bài toán](#có-3-cách-giải-quyết-bài-toán)
+  - [Redux Saga: 19 - Add connected react router package](#redux-saga-19---add-connected-react-router-package)
 
 ## Redux Saga: 01 - Giới thiệu tổng quan về saga 🎉
 
@@ -195,3 +196,5 @@ function App() {
     -   One thing to make sure, when route changes, it doesn't cause re-render our components.
 
 --> connected-react-route + custom history.
+
+## Redux Saga: 19 - Add [connected react router package](https://github.com/supasate/connected-react-router)

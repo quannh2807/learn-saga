@@ -46,15 +46,6 @@ const LoginPage = () => {
 					>
 						Fake login
 					</Button>
-
-					<Button
-						fullWidth
-						variant="outlined"
-						color="secondary"
-						onClick={() => dispatch(authActions.logout())}
-					>
-						Logout
-					</Button>
 				</Box>
 			</Paper>
 		</div>
