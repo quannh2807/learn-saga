@@ -217,3 +217,17 @@ function App() {
 ## Redux Saga: 21 - Admin Layout với CSS Grid and Material UI
 
 ## Redux Saga: 23 - Phân tích tính năng trang Dashboard
+
+**Dashboard state**
+- loading
+- statistics
+  - maleCount
+  - femaleCount
+  - highMarkCount
+  - lowMarkCount
+- highestStudentList
+- lowestStudentList
+- rakingByCityList
+  - hcm: []
+  - hn: []
+  - ...
