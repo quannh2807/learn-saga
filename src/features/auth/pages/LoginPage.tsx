@@ -1,6 +1,8 @@
 import { Box, Button, Paper, Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/styles';
+import { useAppDispatch } from 'app/hooks';
 import React from 'react';
+import { authActions } from '../authSlice';
 
 const useStyles = makeStyles((theme) => ({
 	root: {
@@ -18,6 +20,15 @@ const useStyles = makeStyles((theme) => ({
 
 const LoginPage = () => {
 	const classes = useStyles();
+	const dispatch = useAppDispatch();
+	const handleLoginClick = () => {
+		dispatch(
+			authActions.login({
+				username: '',
+				password: '',
+			})
+		);
+	};
 
 	return (
 		<div className={classes.root}>
@@ -27,8 +38,22 @@ const LoginPage = () => {
 				</Typography>
 
 				<Box mt={4}>
-					<Button fullWidth variant="contained" color="primary">
+					<Button
+						fullWidth
+						variant="contained"
+						color="primary"
+						onClick={handleLoginClick}
+					>
 						Fake login
+					</Button>
+
+					<Button
+						fullWidth
+						variant="outlined"
+						color="secondary"
+						onClick={() => dispatch(authActions.logout())}
+					>
+						Logout
 					</Button>
 				</Box>
 			</Paper>

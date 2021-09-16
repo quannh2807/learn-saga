@@ -18,6 +18,7 @@
       - [Mini Project - Student Management](#mini-project---student-management)
         - [fetures](#fetures)
   - [Redux Saga: 15 - Add Material UI library to reactjs typescript](#redux-saga-15---add-material-ui-library-to-reactjs-typescript)
+  - [Redux Saga: 16 - Setup slice to handle login in redux toolkit](#redux-saga-16---setup-slice-to-handle-login-in-redux-toolkit)
 
 ## Redux Saga: 01 - Giới thiệu tổng quan về saga 🎉
 
@@ -106,6 +107,7 @@ REST client
 ##### fetures
 
 -   auth / authentication:
+
     -   login
     -   register
     -   forget password
@@ -117,3 +119,27 @@ REST client
 -   admin/students
 
 ## Redux Saga: 15 - Add Material UI library to reactjs typescript
+
+## Redux Saga: 16 - Setup slice to handle login in redux toolkit
+
+CLICK LOGIN
+
+-   Call api to login
+-   Success -> redirect admin
+-   Failed -> show Error
+
+authSaga
+
+-   if logged in, watch LOGOUT
+-   else watch LOGIN
+
+LOGIN
+
+-   call login API to get token + user info
+-   set token to local storage
+-   -redirect to admi page
+
+LOGOUT
+
+-   clear token from localstorage
+-   redirect to login page
