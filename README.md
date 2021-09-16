@@ -19,6 +19,7 @@
         - [fetures](#fetures)
   - [Redux Saga: 15 - Add Material UI library to reactjs typescript](#redux-saga-15---add-material-ui-library-to-reactjs-typescript)
   - [Redux Saga: 16 - Setup slice to handle login in redux toolkit](#redux-saga-16---setup-slice-to-handle-login-in-redux-toolkit)
+  - [Redux Saga: 17 - Cài đặt 2 tasks login và logout](#redux-saga-17---cài-đặt-2-tasks-login-và-logout)
 
 ## Redux Saga: 01 - Giới thiệu tổng quan về saga 🎉
 
@@ -143,3 +144,5 @@ LOGOUT
 
 -   clear token from localstorage
 -   redirect to login page
+
+## Redux Saga: 17 - Cài đặt 2 tasks login và logout
