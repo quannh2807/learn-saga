@@ -3,12 +3,10 @@ import { connectRouter, routerMiddleware } from 'connected-react-router';
 import authReducer from 'features/auth/authSlice';
 import createSagaMiddleware from 'redux-saga';
 import { history } from 'utils';
-import counterReducer from '../features/counter/counterSlice';
 import rootSaga from './rootSaga';
 
 const rootReducer = combineReducers({
 	router: connectRouter(history),
-	counter: counterReducer,
 	auth: authReducer,
 });
 

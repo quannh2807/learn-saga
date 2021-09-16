@@ -6,10 +6,6 @@ import React, { useEffect } from 'react';
 import { Route, Switch } from 'react-router';
 
 function App() {
-	useEffect(() => {
-		cityApi.getAll().then((res) => console.log(res));
-	}, []);
-
 	return (
 		<React.StrictMode>
 			<Switch>

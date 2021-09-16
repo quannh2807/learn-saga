@@ -23,6 +23,7 @@
   - [Redux Saga: 18 - Phân tích cách xử lý navigation trong redux saga](#redux-saga-18---phân-tích-cách-xử-lý-navigation-trong-redux-saga)
       - [Có 3 cách giải quyết bài toán](#có-3-cách-giải-quyết-bài-toán)
   - [Redux Saga: 19 - Add connected react router package](#redux-saga-19---add-connected-react-router-package)
+  - [Redux Saga: 20 - Phân tích cách xử lý loading và error](#redux-saga-20---phân-tích-cách-xử-lý-loading-và-error)
 
 ## Redux Saga: 01 - Giới thiệu tổng quan về saga 🎉
 
@@ -198,3 +199,15 @@ function App() {
 --> connected-react-route + custom history.
 
 ## Redux Saga: 19 - Add [connected react router package](https://github.com/supasate/connected-react-router)
+
+## Redux Saga: 20 - Phân tích cách xử lý loading và error
+
+- RTK + Thunk: provide a way to await an async action right on component
+--> Handle loading/error on component easily
+
+- RTK + Saga: doesn't have a way to do so
+--> what to do?
+
+- Considerations:
+  - Trigger error toast from Saga
+  - Consider to call API directly on component instead of going through saga.
