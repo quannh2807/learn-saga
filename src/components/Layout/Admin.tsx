@@ -1,23 +1,60 @@
-import { Button } from '@material-ui/core';
+import { Box, makeStyles } from '@material-ui/core';
 import { useAppDispatch } from 'app/hooks';
-import { authActions } from 'features/auth/authSlice';
+import { Header, Sidebar } from 'components/Common';
+import Dashboard from 'features/dashboard';
+import StudentFeature from 'features/student';
 import React from 'react';
+import { Route, Switch } from 'react-router-dom';
+
+const useStyles = makeStyles((theme) => ({
+	root: {
+		display: 'grid',
+		gridTemplateRows: 'auto 1fr',
+		gridTemplateColumns: '300px 1fr',
+		gridTemplateAreas: `"header header" "sidebar main"`,
+
+		minHeight: '100vh',
+		backgroundColor: theme.palette.background.paper,
+	},
+
+	header: {
+		gridArea: 'header',
+	},
+	sidebar: {
+		gridArea: 'sidebar',
+		borderRight: `1px solid ${theme.palette.divider}`,
+	},
+	main: {
+		gridArea: 'main',
+
+		padding: theme.spacing(2, 3),
+	},
+}));
 
 interface AdminLayoutProps {}
 
 export const AdminLayout = (props: AdminLayoutProps) => {
-	const dispatch = useAppDispatch()
+	const dispatch = useAppDispatch();
+	const classes = useStyles();
 
 	return (
-		<div>
-			<p>admin layout</p>
-			<Button
-				variant="outlined"
-				color="secondary"
-				onClick={() => dispatch(authActions.logout())}
-			>
-				Logout
-			</Button>
-		</div>
+		<Box className={classes.root}>
+			<Box className={classes.header}>
+				<Header />
+			</Box>
+			<Box className={classes.sidebar}>
+				<Sidebar />
+			</Box>
+			<Box className={classes.main}>
+				<Switch>
+					<Route path="/admin/dashboad">
+						<Dashboard />
+					</Route>
+					<Route path="/admin/student">
+						<StudentFeature />
+					</Route>
+				</Switch>
+			</Box>
+		</Box>
 	);
 };

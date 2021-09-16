@@ -24,6 +24,8 @@
       - [Có 3 cách giải quyết bài toán](#có-3-cách-giải-quyết-bài-toán)
   - [Redux Saga: 19 - Add connected react router package](#redux-saga-19---add-connected-react-router-package)
   - [Redux Saga: 20 - Phân tích cách xử lý loading và error](#redux-saga-20---phân-tích-cách-xử-lý-loading-và-error)
+  - [Redux Saga: 21 - Admin Layout với CSS Grid and Material UI](#redux-saga-21---admin-layout-với-css-grid-and-material-ui)
+  - [Redux Saga: 23 - Phân tích tính năng trang Dashboard](#redux-saga-23---phân-tích-tính-năng-trang-dashboard)
 
 ## Redux Saga: 01 - Giới thiệu tổng quan về saga 🎉
 
@@ -202,12 +204,16 @@ function App() {
 
 ## Redux Saga: 20 - Phân tích cách xử lý loading và error
 
-- RTK + Thunk: provide a way to await an async action right on component
---> Handle loading/error on component easily
+-   RTK + Thunk: provide a way to await an async action right on component
+    --> Handle loading/error on component easily
 
-- RTK + Saga: doesn't have a way to do so
---> what to do?
+-   RTK + Saga: doesn't have a way to do so
+    --> what to do?
 
-- Considerations:
-  - Trigger error toast from Saga
-  - Consider to call API directly on component instead of going through saga.
+-   Considerations:
+    -   Trigger error toast from Saga
+    -   Consider to call API directly on component instead of going through saga.
+
+## Redux Saga: 21 - Admin Layout với CSS Grid and Material UI
+
+## Redux Saga: 23 - Phân tích tính năng trang Dashboard
