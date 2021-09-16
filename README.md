@@ -20,6 +20,8 @@
   - [Redux Saga: 15 - Add Material UI library to reactjs typescript](#redux-saga-15---add-material-ui-library-to-reactjs-typescript)
   - [Redux Saga: 16 - Setup slice to handle login in redux toolkit](#redux-saga-16---setup-slice-to-handle-login-in-redux-toolkit)
   - [Redux Saga: 17 - Cài đặt 2 tasks login và logout](#redux-saga-17---cài-đặt-2-tasks-login-và-logout)
+  - [Redux Saga: 18 - Phân tích cách xử lý navigation trong redux saga](#redux-saga-18---phân-tích-cách-xử-lý-navigation-trong-redux-saga)
+      - [Có 3 cách giải quyết bài toán](#có-3-cách-giải-quyết-bài-toán)
 
 ## Redux Saga: 01 - Giới thiệu tổng quan về saga 🎉
 
@@ -146,3 +148,50 @@ LOGOUT
 -   redirect to login page
 
 ## Redux Saga: 17 - Cài đặt 2 tasks login và logout
+
+## Redux Saga: 18 - Phân tích cách xử lý navigation trong redux saga
+
+#### Có 3 cách giải quyết bài toán
+
+-   Theo dõi redux store và đặt redirect trong một component
+    -   Hạn chế sẽ phải đặt flag để check login hay chưa
+
+```
+function App() {
+  const logginSuccess = useAppSelector(state => state.auth.loginSuccess)
+
+  useEffect(() => {
+    if (logginSuccess) {
+      // redirect router
+    }
+  }, [logginSuccess])
+}
+```
+
+--> Flow is fragmented, hard to control when you have more and more state
+
+-   Using callbacks
+    -   This approach using no-serializable (callback) in action and dispatch to redux store which is **NOT RECOMMEND** BY Redux Toolkit
+
+```
+function App() {
+  const dispatch = useAppDispatch()
+
+  const handleLoginSubmit = (values) => {
+    dispatch(authActions.login({
+      ...values.
+      onSuccess: () => { history.push('/admin') },
+      onError: () => { console.log('Notify error to user') },
+    }))
+  }
+
+  // ...
+}
+```
+
+-   Using connected-react-router
+    -   Sync routings to redux.
+    -   Navigate by dispatching an action to redux store.
+    -   One thing to make sure, when route changes, it doesn't cause re-render our components.
+
+--> connected-react-route + custom history.
