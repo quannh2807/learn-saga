@@ -1,5 +1,4 @@
 import { Box, makeStyles } from '@material-ui/core';
-import { useAppDispatch } from 'app/hooks';
 import { Header, Sidebar } from 'components/Common';
 import Dashboard from 'features/dashboard';
 import StudentFeature from 'features/student';
@@ -34,7 +33,6 @@ const useStyles = makeStyles((theme) => ({
 interface AdminLayoutProps {}
 
 export const AdminLayout = (props: AdminLayoutProps) => {
-	const dispatch = useAppDispatch();
 	const classes = useStyles();
 
 	return (
@@ -47,7 +45,7 @@ export const AdminLayout = (props: AdminLayoutProps) => {
 			</Box>
 			<Box className={classes.main}>
 				<Switch>
-					<Route path="/admin/dashboad">
+					<Route path="/admin/dashboard">
 						<Dashboard />
 					</Route>
 					<Route path="/admin/student">

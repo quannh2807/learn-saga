@@ -1,11 +1,8 @@
-import { Collapse } from '@material-ui/core';
-import Divider from '@material-ui/core/Divider';
 import List from '@material-ui/core/List';
-import ListItem, { ListItemProps } from '@material-ui/core/ListItem';
+import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
-import { ExpandLess, ExpandMore, StarBorder } from '@material-ui/icons';
 import DashboardIcon from '@material-ui/icons/Dashboard';
 import PeopleIcon from '@material-ui/icons/People';
 import React from 'react';
