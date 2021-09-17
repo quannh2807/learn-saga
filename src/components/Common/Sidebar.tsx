@@ -1,3 +1,4 @@
+import { Box } from '@material-ui/core';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
@@ -30,7 +31,7 @@ export function Sidebar() {
 	const classes = useStyles();
 
 	return (
-		<div className={classes.root}>
+		<Box className={classes.root}>
 			<List component="nav" aria-label="main mailbox folders">
 				<NavLink to="/admin/dashboard" className={classes.link}>
 					<ListItem button>
@@ -50,6 +51,6 @@ export function Sidebar() {
 					</ListItem>
 				</NavLink>
 			</List>
-		</div>
+		</Box>
 	);
 }

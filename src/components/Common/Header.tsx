@@ -1,3 +1,4 @@
+import { Box } from '@material-ui/core';
 import AppBar from '@material-ui/core/AppBar';
 import IconButton from '@material-ui/core/IconButton';
 import { makeStyles } from '@material-ui/core/styles';
@@ -28,8 +29,8 @@ export function Header() {
 	};
 
 	return (
-		<div className={classes.root}>
-			<AppBar position="static">
+		<Box className={classes.root}>
+			<AppBar position="static" elevation={0}>
 				<Toolbar>
 					<IconButton
 						edge="start"
@@ -46,13 +47,13 @@ export function Header() {
 						edge="start"
 						className={classes.menuButton}
 						color="inherit"
-                        aria-label="menu"
-                        onClick={handleLogoutAction}
+						aria-label="menu"
+						onClick={handleLogoutAction}
 					>
 						<ExitToAppIcon />
 					</IconButton>
 				</Toolbar>
 			</AppBar>
-		</div>
+		</Box>
 	);
 }
