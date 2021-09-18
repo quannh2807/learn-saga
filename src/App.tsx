@@ -2,12 +2,15 @@ import { NotFound, PrivateRoute } from 'components/Common';
 import { AdminLayout } from 'components/Layout';
 import LoginPage from 'features/auth/pages/LoginPage';
 import React from 'react';
-import { Route, Switch } from 'react-router';
+import { Redirect, Route, Switch } from 'react-router';
 
 function App() {
 	return (
 		<React.StrictMode>
 			<Switch>
+				<Route exact path="/">
+					<Redirect to="/login" />
+				</Route>
 				{/* LOGIN */}
 				<Route path="/login">
 					<LoginPage />

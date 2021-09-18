@@ -23,6 +23,7 @@ function* handleLogin(payload: LoginPayload) {
 
 function* handleLogout() {
 	yield delay(500);
+	console.log('remove access token')
 	localStorage.removeItem('access_token');
 	// redirect to login page
 	yield put(push('/login'));
