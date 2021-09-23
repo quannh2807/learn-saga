@@ -31,6 +31,7 @@
     - [Routings](#routings)
     - [LISTING](#listing)
     - [ADD/EDIT](#addedit)
+  - [Redux Saga: 29 - Cài đặt slice và saga cho feature Student](#redux-saga-29---cài-đặt-slice-và-saga-cho-feature-student)
 
 ## Redux Saga: 01 - Giới thiệu tổng quan về saga 🎉
 
@@ -259,3 +260,5 @@ function App() {
 
 -   React hook form
 -   Yup
+
+## Redux Saga: 29 - Cài đặt slice và saga cho feature Student
