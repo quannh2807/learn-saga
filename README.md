@@ -27,6 +27,10 @@
   - [Redux Saga: 21 - Admin Layout với CSS Grid and Material UI](#redux-saga-21---admin-layout-với-css-grid-and-material-ui)
   - [Redux Saga: 23 - Phân tích tính năng trang Dashboard](#redux-saga-23---phân-tích-tính-năng-trang-dashboard)
   - [Redux Saga: 24 - Cài đặt slice cho trang dashboard](#redux-saga-24---cài-đặt-slice-cho-trang-dashboard)
+  - [Redux Saga: 28 - Giới thiệu tính năng Student Management](#redux-saga-28---giới-thiệu-tính-năng-student-management)
+    - [Routings](#routings)
+    - [LISTING](#listing)
+    - [ADD/EDIT](#addedit)
 
 ## Redux Saga: 01 - Giới thiệu tổng quan về saga 🎉
 
@@ -220,17 +224,38 @@ function App() {
 ## Redux Saga: 23 - Phân tích tính năng trang Dashboard
 
 **Dashboard state**
-- loading
-- statistics
-  - maleCount
-  - femaleCount
-  - highMarkCount
-  - lowMarkCount
-- highestStudentList
-- lowestStudentList
-- rakingByCityList
-  - hcm: []
-  - hn: []
-  - ...
+
+-   loading
+-   statistics
+    -   maleCount
+    -   femaleCount
+    -   highMarkCount
+    -   lowMarkCount
+-   highestStudentList
+-   lowestStudentList
+-   rakingByCityList
+    -   hcm: []
+    -   hn: []
+    -   ...
 
 ## Redux Saga: 24 - Cài đặt slice cho trang dashboard
+
+## Redux Saga: 28 - Giới thiệu tính năng Student Management
+
+### Routings
+
+-   /admin/students: listing
+-   /admin/students/add
+-   /admin/students/edit/:studentId
+
+### LISTING
+
+-   Search by name
+-   Filter by city
+-   Sort by name, mark
+-   Pagination
+
+### ADD/EDIT
+
+-   React hook form
+-   Yup

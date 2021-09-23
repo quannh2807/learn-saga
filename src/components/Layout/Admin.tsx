@@ -48,7 +48,7 @@ export const AdminLayout = (props: AdminLayoutProps) => {
 					<Route path="/admin/dashboard">
 						<Dashboard />
 					</Route>
-					<Route path="/admin/student">
+					<Route path="/admin/students">
 						<StudentFeature />
 					</Route>
 				</Switch>
