@@ -1,9 +1,15 @@
 import { Box, Button, Typography, makeStyles } from '@material-ui/core';
 import { Pagination } from '@material-ui/lab';
 import { useAppDispatch, useAppSelector } from 'app/hooks';
+import { selectCityMap } from 'features/city/citySlice';
 import React, { useEffect } from 'react';
 import { StudentTable } from '../components/StudentTable';
-import { selectStudentFilter, selectStudentList, selectStudentPagination, studentActions } from '../studentSlice';
+import {
+	selectStudentFilter,
+	selectStudentList,
+	selectStudentPagination,
+	studentActions,
+} from '../studentSlice';
 
 const useStyles = makeStyles((theme) => ({
 	root: {},
@@ -22,24 +28,25 @@ interface ListPageProps {}
 
 export const ListPage = (props: ListPageProps) => {
 	const studentList = useAppSelector(selectStudentList);
-    const pagination = useAppSelector(selectStudentPagination);
-    const filter = useAppSelector(selectStudentFilter)
+	const pagination = useAppSelector(selectStudentPagination);
+	const filter = useAppSelector(selectStudentFilter);
+	const cityMap = useAppSelector(selectCityMap);
 
 	const dispatch = useAppDispatch();
 	const classes = useStyles();
 
 	useEffect(() => {
-		dispatch(
-			studentActions.fetchStudentList(filter)
-		);
+		dispatch(studentActions.fetchStudentList(filter));
 	}, [dispatch, filter]);
 
-    const handlePageChange = (e: any, page: number) => {
-        dispatch(studentActions.setFilter({
-            ...filter,
-            _page: page,
-        }))
-    };
+	const handlePageChange = (e: any, page: number) => {
+		dispatch(
+			studentActions.setFilter({
+				...filter,
+				_page: page,
+			})
+		);
+	};
 
 	return (
 		<Box className={classes.root}>
@@ -51,7 +58,7 @@ export const ListPage = (props: ListPageProps) => {
 				</Button>
 			</Box>
 			{/* Student table */}
-			<StudentTable studentList={studentList} />
+			<StudentTable studentList={studentList} cityMap={cityMap} />
 
 			{/* Pagination */}
 			<Box mt={2} display="flex" justifyContent="center">
