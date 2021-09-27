@@ -12,11 +12,11 @@ const useStyles = makeStyles({
 	table: {},
 });
 
-export interface StudentRankingList {
+export interface StudentRankingListProps {
 	studentList: Student[];
 }
 
-export function StudentRankingList({ studentList }: StudentRankingList) {
+export function StudentRankingList({ studentList }: StudentRankingListProps) {
 	const classes = useStyles();
 
 	return (
