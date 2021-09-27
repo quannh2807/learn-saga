@@ -3,7 +3,8 @@ import { Pagination } from '@material-ui/lab';
 import { useAppDispatch, useAppSelector } from 'app/hooks';
 import { selectCityList, selectCityMap } from 'features/city/citySlice';
 import React, { useEffect } from 'react';
-import { ListParams } from 'types';
+import { Link, useRouteMatch, useHistory } from 'react-router-dom';
+import { ListParams, Student } from 'types';
 import { StudentFilters } from '../components/StudentFilters';
 import { StudentTable } from '../components/StudentTable';
 import {
@@ -35,6 +36,8 @@ export const ListPage = (props: ListPageProps) => {
 	const cityMap = useAppSelector(selectCityMap);
 	const cityList = useAppSelector(selectCityList);
 
+	const history = useHistory();
+	const match = useRouteMatch();
 	const dispatch = useAppDispatch();
 	const classes = useStyles();
 
@@ -55,14 +58,20 @@ export const ListPage = (props: ListPageProps) => {
 		dispatch(studentActions.setFilterWithDebounce(newFilter));
 	};
 
+	const handleEditStudent = async (student: Student) => {
+		history.push(`${match.url}/edit/${student.id}`)
+	}
+
 	return (
 		<Box className={classes.root}>
 			<Box className={classes.titleContent}>
 				<Typography variant="h4">Students</Typography>
 
-				<Button variant="contained" color="primary">
-					Add new student
-				</Button>
+				<Link to={`${match.url}/add`} style={{ textDecoration: 'none' }}>
+					<Button variant="contained" color="primary">
+						Add new student
+					</Button>
+				</Link>
 			</Box>
 			{/* Filter component */}
 			<Box mb={3}>
@@ -73,7 +82,7 @@ export const ListPage = (props: ListPageProps) => {
 				/>
 			</Box>
 
-			<StudentTable studentList={studentList} cityMap={cityMap} />
+			<StudentTable studentList={studentList} cityMap={cityMap} onEdit={handleEditStudent} />
 
 			<Box mt={2} display="flex" justifyContent="center">
 				<Pagination

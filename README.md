@@ -32,6 +32,7 @@
     - [LISTING](#listing)
     - [ADD/EDIT](#addedit)
   - [Redux Saga: 29 - Cài đặt slice và saga cho feature Student](#redux-saga-29---cài-đặt-slice-và-saga-cho-feature-student)
+  - [Redux Saga: 38 - Setup trang Add/Edit Student](#redux-saga-38---setup-trang-addedit-student)
 
 ## Redux Saga: 01 - Giới thiệu tổng quan về saga 🎉
 
@@ -258,7 +259,27 @@ function App() {
 
 ### ADD/EDIT
 
--   React hook form
+-   React hook form V7
 -   Yup
 
 ## Redux Saga: 29 - Cài đặt slice và saga cho feature Student
+
+## Redux Saga: 38 - Setup trang Add/Edit Student
+
+STUDENT FORM
+
+-   Mode: add/edit
+-   Initial value
+-   Values:
+    -   name: Text Input
+    -   age: Number Input
+    -   gender: Radio options
+    -   city: Select
+    -   mark: Number Input
+-   Validations: all required
+    -   name: at least two words
+    -   age >= 18
+    -   gender: male / female
+    -   city
+    -   mark: 0 -> 10
+-   Submition: redirect to student list page after submitting successfully
